@@ -7,7 +7,7 @@ function NavMenus() {
       <div className="container">
         <div className="table">
           <div className="Logo">
-            <img src="/logo.png" alt="logo" />
+            <h1>PIXELZ</h1>
           </div>
 
           <div className="Menu">

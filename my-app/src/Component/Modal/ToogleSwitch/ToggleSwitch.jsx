@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ToogleSwitch.scss';
 
-const ToggleSwitch = ({ userCmt, checkAllUser}) => {
+const ToggleSwitch = ({ userCmt, checkAllUser, isAllChecked}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleToggle = () => {
@@ -10,8 +10,12 @@ const ToggleSwitch = ({ userCmt, checkAllUser}) => {
     if (checkAllUser) {
       checkAllUser();
     }
-
   };
+
+  React.useEffect(() => {
+    setIsChecked(isAllChecked);
+  }, [isAllChecked]);
+
 
   return (
     <div className="toggle-switch">

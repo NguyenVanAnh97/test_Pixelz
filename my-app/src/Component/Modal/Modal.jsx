@@ -72,6 +72,7 @@ function Modal(props) {
       setEditingComment(null);
     }
     setData(data.map((item) => ({ ...item, isSelected: false })));
+    setIsAllChecked(false);
   };
 
   const deleteAll = () => {
@@ -135,6 +136,7 @@ function Modal(props) {
             userCmt={userCmts}
             checkAllUser={handleToggleAll}
             id={data.id}
+            isAllChecked={isAllChecked}
           />
         </div>
         <div className="body">
