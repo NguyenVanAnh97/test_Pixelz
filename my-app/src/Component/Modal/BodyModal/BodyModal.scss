@@ -1,0 +1,164 @@
+.body-modal {
+  padding: 1px 20px 15px;
+  .image-card {
+    display: flex;
+    align-items: center;
+    border: 2px solid #b6b2b2;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 0 0 10px;
+    background-color: #fff;
+
+    .checkbox-wrapper-23 {
+      margin-right: 10px;
+      * {
+        box-sizing: border-box;
+      }
+
+      input {
+        position: absolute;
+        opacity: 0;
+      }
+
+      input:checked + label svg path {
+        stroke-dashoffset: 0;
+      }
+
+      input:focus + label {
+        transform: scale(1.03);
+      }
+
+      input + label {
+        display: block;
+        border: 2px solid #b6b2b2;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      input + label:active {
+        transform: scale(1.05);
+        border-radius: 12px;
+      }
+
+      input + label svg {
+        pointer-events: none;
+        padding: 5%;
+        fill: #b6b2b2;
+      }
+
+      input + label svg path {
+        fill: none;
+        stroke: #333;
+        stroke-width: 4px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 101;
+        transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+      }
+    }
+
+    .image-wrapper {
+      flex-shrink: 0;
+
+      img {
+        width: 120px;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+
+    .content {
+      flex: 1;
+      align-items: flex-start;
+      padding: 0 10px;
+
+      h4 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      &_table {
+        border: 2px solid #b6b2b2;
+        border-radius: 8px;
+        margin: 10px 0 0px;
+        background-color: #fff;
+        overflow: hidden;
+      }
+
+      .section {
+        background-color: #f1f1f1;
+        padding: 8px 15px;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 12px;
+        color: #333;
+        width: 100%;
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .editInput {
+        height: 44px;
+        width: 100%;
+        margin: 0;
+        padding: 0 12px;
+        border: none;
+        outline: none;
+        word-wrap: break-word;
+        &:focus {
+          border-color: #aaa;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          font-style: italic;
+        }
+        i:hover {
+          color: aqua;
+        }
+      }
+
+      .comment {
+        font-size: 14px;
+        color: #555;
+        padding: 0 12px;
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .editButton {
+        i:hover {
+          color: rgb(143, 233, 16);
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+        }
+      }
+
+      .deleteButton {
+        i:hover {
+          color: red;
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+        }
+      }
+
+      .shareButtom {
+        i:hover {
+          color: rgb(32, 118, 172);
+          transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+        }
+      }
+    }
+  }
+}

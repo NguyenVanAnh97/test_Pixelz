@@ -1,0 +1,97 @@
+.modalRoot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .modalBackground {
+    width: 60em;
+    height: 59em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .header_modal {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+      .closeBtn {
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        width: 5px 20px;
+        font-size: 20px;
+        color: rgb(204, 204, 204, 0.9);
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+
+    .title {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .numberClass {
+          background: rgb(181, 7, 7);
+          color: #fff;
+          border-radius: 50%;
+          padding: 5px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+    .body {
+      max-height: 45em;
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+      overflow-y: scroll;
+      .noComments {
+        text-align: center;
+        color: #525151;
+        font-style: italic;
+      }
+    }
+    .footer {
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        padding: 12px 25px;
+        border-radius: 8px;
+        border: 1px solid #525151;
+        font-weight: bold;
+        background: #fff;
+        cursor: pointer;
+        font-size: 19px;
+      }
+      &_right {
+        display: flex;
+        gap: 10px;
+        .SendAllButtom {
+          background-color: rgb(21, 20, 20);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
